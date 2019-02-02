@@ -1,4 +1,4 @@
-package com.simples.estudantes.pratice.dao;
+package com.simples.estudantes.pratice.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -85,6 +85,13 @@ public class Estudante {
 
 	public void setSerie(int serie) {
 		this.serie = serie;
+	}
+
+
+	@Override
+	public String toString() {
+		return "Estudante [id=" + id + ", nome=" + nome + ", sobrenome=" + sobrenome + ", email=" + email + ", serie="
+				+ serie + "]";
 	}
 
 }
