@@ -26,7 +26,6 @@ public class EstudanteDAOHibernateImpl implements EstudanteDAO {
 	}
 	
 	@Override
-	@Transactional
 	public List<Estudante> findAll() {
 		
 		//receber a session hibernate atual
@@ -41,6 +40,46 @@ public class EstudanteDAOHibernateImpl implements EstudanteDAO {
 		
 		//retornar os resultados
 		return estudantes;
+	}
+
+	@Override
+	public Estudante findById(int theId) {
+		
+		//receber a session hibernate atual
+		Session currentSession = entityManager.unwrap(Session.class);
+		
+		//receber um Estudante
+		Estudante theEstudante =
+				currentSession.get(Estudante.class, theId);
+		
+		//Retorna Estudante
+		
+		return theEstudante;
+	}
+
+	@Override
+	public void save(Estudante theEstudante) {
+		
+		//receber a session hibernate atual
+		Session currentSession = entityManager.unwrap(Session.class);
+		
+		//salvar ou atualizar um Estudante
+		currentSession.saveOrUpdate(theEstudante);
+		
+	}
+
+	@Override
+	public void delete(int theId) {
+		//receber a session hibernate atual
+		Session currentSession = entityManager.unwrap(Session.class);
+		
+		//deletando um objeto pela sua PK
+		Query theQuery =
+				currentSession.createQuery("delete from Estudante where id=:estudanteId");
+		theQuery.setParameter("estudanteId", theId);
+		
+		theQuery.executeUpdate();
+		
 	}
 
 	

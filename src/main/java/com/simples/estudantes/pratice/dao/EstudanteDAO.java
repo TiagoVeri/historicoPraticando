@@ -9,5 +9,14 @@ public interface EstudanteDAO {
 	//Receber lista de estudantes
 	public List<Estudante> findAll();
 	
+	//Receber estudante por id
+	public Estudante findById(int theId);
+	
+	//Salvar um estudante ou atualizar um existente
+	public void save(Estudante theEstudante);
+	
+	//deletar um estudante
+	public void delete(int theId);
+	
 	
 }
