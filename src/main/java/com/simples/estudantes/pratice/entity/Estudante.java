@@ -26,21 +26,18 @@ public class Estudante {
 	@Column(name="email")
 	private String email;
 	
-	@Column(name="Serie")
-	private int serie;
-	
+
 	//definir contrutores
 	public Estudante() {
 		
 	}
 	
 	
-	public Estudante(int id, String nome, String sobrenome, String email, int serie) {
+	public Estudante(int id, String nome, String sobrenome, String email) {
 		this.id = id;
 		this.nome = nome;
 		this.sobrenome = sobrenome;
 		this.email = email;
-		this.serie = serie;
 	}
 
 
@@ -79,19 +76,10 @@ public class Estudante {
 		this.email = email;
 	}
 
-	public int getSerie() {
-		return serie;
-	}
-
-	public void setSerie(int serie) {
-		this.serie = serie;
-	}
-
 
 	@Override
 	public String toString() {
-		return "Estudante [id=" + id + ", nome=" + nome + ", sobrenome=" + sobrenome + ", email=" + email + ", serie="
-				+ serie + "]";
+		return "Estudante [id=" + id + ", nome=" + nome + ", sobrenome=" + sobrenome + ", email=" + email + "]";
 	}
 
 }
