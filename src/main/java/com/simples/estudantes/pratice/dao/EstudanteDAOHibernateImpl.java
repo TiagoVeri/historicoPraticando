@@ -43,7 +43,7 @@ public class EstudanteDAOHibernateImpl implements EstudanteDAO {
 	}
 
 	@Override
-	public Estudante findById(int theId) {
+	public Estudante findById(long theId) {
 		
 		//receber a session hibernate atual
 		Session currentSession = entityManager.unwrap(Session.class);

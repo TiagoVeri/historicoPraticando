@@ -10,7 +10,7 @@ public interface EstudanteService {
 		public List<Estudante> findAll();
 		
 		//Receber estudante por id
-		public Estudante findById(int theId);
+		public Estudante findById(long theId);
 		
 		//Salvar um estudante ou atualizar um existente
 		public void save(Estudante theEstudante);

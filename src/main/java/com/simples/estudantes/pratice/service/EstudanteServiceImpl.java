@@ -31,7 +31,7 @@ public class EstudanteServiceImpl implements EstudanteService {
 
 	@Override
 	@Transactional
-	public Estudante findById(int theId) {
+	public Estudante findById(long theId) {
 		return estudanteDAO.findById(theId);
 		 
 	}

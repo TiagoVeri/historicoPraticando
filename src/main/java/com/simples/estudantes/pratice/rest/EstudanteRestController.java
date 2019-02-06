@@ -36,7 +36,7 @@ public class EstudanteRestController {
 	
 	//retornar Estudante pelo seu ID
 	@GetMapping("/estudante/{estudanteId}")
-	public Estudante getEstudante(@PathVariable int estudanteId) {
+	public Estudante getEstudante(@PathVariable long estudanteId) {
 		
 		Estudante theEstudante = estudanteService.findById(estudanteId);
 		
