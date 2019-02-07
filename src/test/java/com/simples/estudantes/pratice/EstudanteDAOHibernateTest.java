@@ -31,20 +31,20 @@ public class EstudanteDAOHibernateTest {
 	public void init() {
 		MockitoAnnotations.initMocks(this);
 	}
-	
-	@Test
-	public void testarReceberEstudantePorId() {
-		Estudante e = new Estudante();
-		e.setId(1);
-		Mockito.when(estudanteDAOHibernateImpl.findById(1L)).thenReturn(e);
-	
-		Estudante est1 = estudanteRestController.get(1L);
-		
-		verify(estudanteDAOHibernateImpl).findById(1);
-		
-		assertEquals(1, est1.getId().longValue());
-		
-}
+//	
+//	@Test
+//	public void testarReceberEstudantePorId() {
+//		Estudante e = new Estudante();
+//		e.setId(1);
+//		Mockito.when(estudanteDAOHibernateImpl.findById(1L)).thenReturn(e);
+//	
+//		Estudante est1 = estudanteRestController.get(1L);
+//		
+//		verify(estudanteDAOHibernateImpl).findById(1);
+//		
+//		assertEquals(1, est1.getId().longValue());
+//		
+//}
 	
 
 }
